@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>img/image.png</file>
+        <file>img/man.gif</file>
+        <file>img/man.png</file>
+        <file>img/man.jpg</file>
+        <file>img/peppa_bg.jpg</file>
+    </qresource>
+</RCC>
