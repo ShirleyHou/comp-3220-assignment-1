@@ -27,13 +27,26 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         dialog.cpp \
-    background.cpp \
-    coordinate.cpp
+    horizontalBackground.cpp \
+    stickman.cpp \
+    asm1game.cpp \
+    peppagamebuilder.cpp \
+    director.cpp
 
 HEADERS += \
         dialog.h \
     background.h \
-    coordinate.h
+    horizontalbackground.h \
+    game.h \
+    character.h \
+    stickman.h \
+    image.h \
+    asm1game.h \
+    factory.h \
+    peppafactory.h \
+    gamebuilder.h \
+    peppagamebuilder.h \
+    director.h
 
 FORMS += \
         dialog.ui

@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include <QPainter>
-#include "background.h"
+#include "game.h"
 namespace Ui {
 class Dialog;
 }
@@ -15,6 +15,10 @@ class Dialog : public QDialog
 public:
     explicit Dialog(QWidget *parent = nullptr);
     ~Dialog();
+    void setGame(Game* game);
+    void loadGame();
+
+    Game* m_game;
 
 public slots:
     void nextFrame();
@@ -24,8 +28,9 @@ protected:
 
 private:
     Ui::Dialog *ui;
-    Background m_background;
     int m_counter;
+
+
 };
 
 #endif // DIALOG_H

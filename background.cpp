@@ -1,42 +1,66 @@
 #include "background.h"
-#include <iostream>
-using namespace std;
-Background::Background(Coordinate coordinate):
-    m_coordinate(coordinate),
-    m_xVelocity(1),
-    m_yVelocity(1)
-    {};
-Background::Background(Coordinate coordinate,
-    double xVelocity,
-    double yVelocity):
-    m_coordinate(coordinate),
-    m_xVelocity(xVelocity),
-    m_yVelocity(yVelocity)
-    {};
-
-bool Background::isCollisionHorizontal(){
-    return m_coordinate.getQtRenderingXCoordinate() >
-            (signed int) (m_coordinate.getFrameWidth());
-}
-
-void Background::render(QPainter &painter, unsigned int time)
-{
-    if (isCollisionHorizontal()) {
-            m_coordinate.setXCoordinateToRightFrame(0);
 
 
-        }
 
-    cout << m_coordinate.getFrameWidth()<<" "<<m_coordinate.getFrameHeight() <<endl;
-    QPixmap pix(":/resources/img/peppa_bg.jpg");
-    painter.drawPixmap(m_coordinate.getQtRenderingXCoordinate(),
-                       m_coordinate.getQtRenderingYCoordinate(),
-                       1920,558, pix);
-    painter.drawPixmap(m_coordinate.getQtRenderingXCoordinate()-1920,
-                       m_coordinate.getQtRenderingYCoordinate(),
-                       1920,558, pix);
 
-    m_coordinate.changeInXCoordinate(m_xVelocity);
-    m_coordinate.changeInYCoordinate(m_yVelocity);
 
-}
+
+
+
+//int Background::get_width(){
+//    return m_width;
+//}
+//int Background::get_height(){
+//    return m_height;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+//    m_picture_path(pictue_path),
+
+
+//int Background::get_x_axis(){
+//    return m_x_axis;
+//};
+//int Background::get_y_axis(){
+//    return m_y_axis;
+//};
+//void Background::set_x_axis(int target){
+//    m_x_axis = target;
+//}
+//void Background::set_y_axis(int target){
+//    m_y_axis = target;
+//}
+
+//double Background::get_x_velocity(){
+//    return m_x_velocity;
+//}
+//double Background::get_y_velocity(){
+//    return m_y_velocity;
+//}
+//void Background::set_x_velocity(double target){
+//    m_x_velocity = target;
+//}
+//void Background::set_y_velocity(double target){
+//    m_y_velocity = target;
+//}
+
+
+//void Background::set_width(int target){
+//    m_width = target;
+//}
+//void Background::set_height(int target){
+//    m_height = target;
+//}
+
+
+

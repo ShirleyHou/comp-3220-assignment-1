@@ -5,5 +5,6 @@
         <file>img/man.png</file>
         <file>img/man.jpg</file>
         <file>img/peppa_bg.jpg</file>
+        <file>config.txt</file>
     </qresource>
 </RCC>
