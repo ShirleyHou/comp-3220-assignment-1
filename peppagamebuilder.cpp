@@ -4,24 +4,34 @@
 //    GameBuilder(factory)
 //{};
 #include <iostream>
-std::vector<Character*> PeppaGameBuilder::buildCharacters(){
+std::vector<Character*> PeppaGameBuilder::buildCharacters(vector<Character_config*> cfgs){
 
-    Character* peppa = game_factory->createCharacter(":/resources/img/man.gif",1000,258,0,0,1.0);
+    //add another method to build individual characters
+
     std::vector<Character*> characters;
-    characters.push_back(peppa);
+    for (auto& cfg:cfgs){
+        double scale = 1.0;
+        if (cfg->size_str=="TINY"){
+            scale = 0.5;
+        }else if (cfg->size_str=="LARGE"){
+            scale = 1.5;
+        }else if (cfg->size_str=="GIANT"){
+            scale = 2.0;
+        }
+        Character* new_character = game_factory->createCharacter(cfg->image_path,cfg->x_position,cfg->y_position,0,0,scale);
+        characters.push_back(new_character);
+    }
     return characters;
 
 };
-Background* PeppaGameBuilder::buildBackground(){
-    Background* background = game_factory->createBackground(":/resources/img/peppa_bg.jpg",0,0,10.0);
+Background* PeppaGameBuilder::buildBackground(std::string path, int x_speed){
+    //":/resources/img/peppa_bg.jpg"
+    Background* background = game_factory->createBackground(path,0,0,x_speed);
     return background;
 
 };
 Game* PeppaGameBuilder::getGame(){
     Game* new_game(game_factory->createGame());
-    new_game->m_background = buildBackground();
-    new_game->m_characters = buildCharacters();
-    std::cout <<"Built peppa game"<<std::endl;
     return new_game;
 };
 

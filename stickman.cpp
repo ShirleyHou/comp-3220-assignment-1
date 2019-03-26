@@ -1,11 +1,11 @@
 #include "stickman.h"
 
-Stickman::Stickman(std::string picture_path, int x_axis, int y_axis, double scale):
+Stickman::Stickman(std::string picture_path, int x_axis=0, int y_axis=0, double scale=1.0):
     Character(picture_path, x_axis, y_axis, 0,0,scale)
 {}
 
 std::string Stickman::tell(){
-    return "I am a stickman!";
+    return "I am "+name;
 }
 
 void Stickman::render(QPainter &painter, int m_counter)

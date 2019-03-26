@@ -31,7 +31,8 @@ SOURCES += \
     stickman.cpp \
     asm1game.cpp \
     peppagamebuilder.cpp \
-    director.cpp
+    director.cpp \
+    configmanager.cpp
 
 HEADERS += \
         dialog.h \
@@ -46,7 +47,9 @@ HEADERS += \
     peppafactory.h \
     gamebuilder.h \
     peppagamebuilder.h \
-    director.h
+    director.h \
+    size.h \
+    configmanager.h
 
 FORMS += \
         dialog.ui

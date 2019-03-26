@@ -7,7 +7,7 @@ public:
     HorizontalBackground(std::string picture_path, int x_axis, int y_axis, double velocity=0);
     virtual ~HorizontalBackground(){}
     void render(QPainter &painter, int m_counter);
-    bool repeat();//could be horizontal or vertically repeat!
+    bool repeat();
     std::string tell();
 };
 

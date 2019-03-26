@@ -13,10 +13,9 @@ bool HorizontalBackground::repeat(){
 void HorizontalBackground::render(QPainter &painter, int m_counter)
 {
     if (repeat()) {
-        cout <<"repeat"<<endl;
         m_x_axis = 0;
     }
-    cout <<"rendering: "<<m_x_axis<< " "<<m_y_axis<<endl;
+
     painter.drawPixmap(m_x_axis,
                        m_y_axis,
                        m_width,

@@ -9,6 +9,7 @@ public:
     virtual ~Stickman(){}
     std::string tell();
     void render(QPainter &painter, int m_counter);
+    std::string name;
 };
 
 #endif // STICKMAN_H
