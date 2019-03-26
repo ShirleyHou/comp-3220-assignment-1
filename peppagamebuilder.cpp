@@ -18,7 +18,7 @@ std::vector<Character*> PeppaGameBuilder::buildCharacters(vector<Character_confi
         }else if (cfg->size_str=="GIANT"){
             scale = 2.0;
         }
-        Character* new_character = game_factory->createCharacter(cfg->image_path,cfg->x_position,cfg->y_position,0,0,scale);
+        Character* new_character = game_factory->createCharacter(cfg->image_path,cfg->x_position,cfg->y_position,0,0,scale, cfg->motion);
         characters.push_back(new_character);
     }
     return characters;

@@ -9,8 +9,15 @@ public:
     Background* createBackground(std::string picture_path, int x_axis, int y_axis, double velocity){
         return new HorizontalBackground(picture_path, x_axis, y_axis, velocity);
     }
-    Character* createCharacter(std::string picture_path, int x_axis, int y_axis, double x_velocity, double y_velocity, double scale){
-        return new Stickman(picture_path, x_axis, y_axis, scale);
+    Character* createCharacter(std::string picture_path,
+                               int x_axis,
+                               int y_axis,
+                               double x_velocity,
+                               double y_velocity,
+                               double scale,
+                               std::string motion
+                               ){
+        return new Stickman(picture_path, x_axis, y_axis, scale,motion);
     }
 
     Game* createGame(){

@@ -5,7 +5,7 @@
 #include <iostream>
 #include "peppafactory.h"
 #include "peppagamebuilder.h"
-
+#include <QDialogButtonBox>
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Dialog),
@@ -17,12 +17,14 @@ void Dialog::setGame(Game* game){
 }
 void Dialog::loadGame(){
     ui->setupUi(this);
-//    int smaller_size = m_background->m_width
+
     this->resize(m_game->m_background->m_width, m_game->m_background->m_height);
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(nextFrame()));
     timer->start(32);
+    m_timer = timer;
+
 
 }
 void Dialog::paintEvent(QPaintEvent *event)
@@ -40,9 +42,23 @@ void Dialog::nextFrame()
 
 }
 
+
 Dialog::~Dialog()
 {
 
     delete m_game;
     delete ui;
+}
+
+void Dialog::on_pushButton_clicked()
+{
+
+    if (m_timer->isActive()){
+        cout<<"paused"<<endl;
+        m_timer->stop();
+    }else{
+        cout<<"resumed"<<endl;
+        m_timer->start();
+    }
+
 }

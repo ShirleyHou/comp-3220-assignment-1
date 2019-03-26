@@ -19,12 +19,16 @@ public:
     void loadGame();
 
     Game* m_game;
-
+    QTimer *m_timer;
 public slots:
     void nextFrame();
 
+
 protected:
     void paintEvent(QPaintEvent *event);
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::Dialog *ui;

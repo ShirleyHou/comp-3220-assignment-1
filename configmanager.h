@@ -14,6 +14,7 @@ struct Character_config{
     int y_position;
     double x_velocity;
     double y_velocity;
+    string motion;
 };
 
 class ConfigManager

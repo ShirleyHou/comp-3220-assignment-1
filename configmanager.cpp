@@ -24,6 +24,7 @@ void ConfigManager::read(std::string filename)
          c->size_str = x_value.value("size").toString().toStdString();
          c->x_position = x_value.value("x_pos").toInt();
          c->y_position = x_value.value("y_pos").toInt();
+         c->motion = x_value.value("motion").toString().toStdString();
          m_characters.push_back(c);
     }
     character_settings = m_characters;
@@ -33,6 +34,6 @@ void ConfigManager::read(std::string filename)
 
 void ConfigManager::print_characters(){
     for(auto const& value: character_settings){
-        std::cout<<value->size_str<<" "<<value->image_path<<" "<<value->x_position<<" "<<value->y_position<<std::endl;
+        std::cout<<value->size_str<<" "<<value->image_path<<" "<<value->x_position<<" "<<value->y_position<<" "<<value->motion<<std::endl;
     }
 }

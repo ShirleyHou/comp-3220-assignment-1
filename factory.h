@@ -14,7 +14,13 @@ public:
 
     virtual ~Factory(){}
     virtual Background* createBackground(std::string picture_path, int x_axis, int y_axis, double velocity)=0;
-    virtual Character* createCharacter(std::string picture_path, int x_axis, int y_axis, double x_velocity, double y_velocity, double scale)=0;
+    virtual Character* createCharacter(std::string picture_path,
+                                       int x_axis,
+                                       int y_axis,
+                                       double x_velocity,
+                                       double y_velocity,
+                                       double scale,
+                                       std::string motion)=0;
     virtual Game* createGame()=0;
 };
 

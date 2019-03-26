@@ -8,7 +8,13 @@
 class Character: public Image{
 public:
 
-    Character(std::string picture_path, int x_axis, int y_axis, double x_velocity, double y_velocity, double scale):
+    Character(std::string picture_path,
+              int x_axis,
+              int y_axis,
+              double x_velocity,
+              double y_velocity,
+              double scale,
+              std::string motion):
         Image(picture_path, x_axis, y_axis, x_velocity=0, y_velocity=0)
     {
         if (std::max(m_width,m_height)>300){
