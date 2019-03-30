@@ -74,3 +74,8 @@ void Dialog::on_pushButton_2_clicked()
     game_selector+=1;
     current_game = m_games[game_selector%m_games.size()];
 }
+
+void Dialog::on_pushButton_3_clicked()
+{
+    
+}

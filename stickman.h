@@ -15,6 +15,7 @@ private:
     double m_y_amplitude;
     double m_y_frequency;
     double m_y_shift;
+    std::vector<QPixmap> animated_pixmaps;
 };
 
 #endif // STICKMAN_H

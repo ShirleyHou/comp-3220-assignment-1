@@ -1,6 +1,6 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
-
+#include <vector>
 
 #include "image.h"
 #include <QPainter>
@@ -30,6 +30,7 @@ public:
 
     virtual ~Character(){};
     double scale;
+
 
 };
 

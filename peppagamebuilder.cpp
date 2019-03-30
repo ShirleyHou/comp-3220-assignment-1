@@ -25,7 +25,7 @@ std::vector<Character*> PeppaGameBuilder::buildCharacters(vector<Character_confi
 
 };
 Background* PeppaGameBuilder::buildBackground(std::string path, int x_speed){
-    //":/resources/img/peppa_bg.jpg"
+
     Background* background = game_factory->createBackground(path,0,0,x_speed);
     return background;
 

@@ -4,33 +4,32 @@
     },
     "Character": [{
          "name": "Peppa",
-         "image_path": ":/resources/img/peppa_gangsta.png",
+         "image_path": ":/resources/img/peppa.png",
          "x_pos": 500,
          "y_pos": 350,
-         "size":"NORMAL",
+         "size":"LARGE",
          "motion":"FAST"
-        },{
-         "name": "George",
-         "image_path": ":/resources/img/george.png",
-         "x_pos": 700,
-         "y_pos": 350,
-         "size":"NORMAL",
-         "motion":"ON"
-        },{
-        "name": "mum",
-        "image_path": ":/resources/img/mom.png",
-        "x_pos": 900,
-        "y_pos": 200,
+        },
+        {"name": "George",
+        "image_path": ":/resources/img/george.png",
+        "x_pos": 700,
+        "y_pos": 350,
         "size":"LARGE",
         "motion":"ON"
        },{
-       "name": "dad",
-       "image_path": ":/resources/img/dad.png",
-       "x_pos": 200,
+       "name": "mum",
+       "image_path": ":/resources/img/mom.png",
+       "x_pos": 900,
        "y_pos": 200,
        "size":"LARGE",
        "motion":"ON"
-       }
-       ]
+      },{
+      "name": "dad",
+      "image_path": ":/resources/img/dad.png",
+      "x_pos": 200,
+      "y_pos": 200,
+      "size":"LARGE",
+      "motion":"ON"
+      }]
 }
 

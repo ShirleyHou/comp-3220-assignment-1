@@ -7,7 +7,7 @@
 #include <fstream>
 #include <configmanager.h>
 
-
+#include "peppa_evil_factory.h"
 using namespace std;
 int main(int argc, char *argv[])
 {
@@ -18,12 +18,21 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
     PeppaFactory* pf = new PeppaFactory;
+    peppa_evil_factory* pef = new peppa_evil_factory;
     PeppaGameBuilder* pgb = new PeppaGameBuilder;
-    Director director(pgb, pf, cm);
+
+
+    Director director(pgb, pef, cm);
     Dialog w;
+    Game* game1 = director.makeGame();
+    Director director2(pgb, pf, cm);
+    Game* game2 = director2.makeGame();
+    vector<Game*> games;
 
-    w.setGame(director.makeGame());
+    games.push_back(game2);
+    games.push_back(game1);
 
+    w.setGames(games);
     w.loadGame();
 
     w.show();

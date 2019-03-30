@@ -6,7 +6,59 @@
         <file>img/george.png</file>
         <file>img/mom.png</file>
         <file>img/dad.png</file>
+        <file>img/dad_gangsta.png</file>
+        <file>img/mom_gangsta.png</file>
+        <file>img/george_gangsta.png</file>
+        <file>img/peppa2.png</file>
+        <file>img/peppa1.png</file>
         <file>img/peppa.png</file>
+        <file>img/dad1.png</file>
+        <file>img/dad2.png</file>
+        <file>img/dad_gangsta1.png</file>
+        <file>img/dad_gangsta2.png</file>
+        <file>img/peppa_gangsta2.png</file>
+        <file>img/peppa_gangsta1.png</file>
         <file>img/peppa_gangsta.png</file>
+        <file>img/mom_gangsta1.png</file>
+        <file>img/mom_gangsta2.png</file>
+        <file>img/george_gangsta1.png</file>
+        <file>img/george_gangsta2.png</file>
+        <file>img/george1.png</file>
+        <file>img/george2.png</file>
+        <file>img/mom1.png</file>
+        <file>img/mom2.png</file>
+        <file>sound/peppa.mp3</file>
+        <file>sound/swag.mp3</file>
+        <file>asm1game.cpp</file>
+        <file>asm1game.h</file>
+        <file>background.cpp</file>
+        <file>background.h</file>
+        <file>character.cpp</file>
+        <file>character.h</file>
+        <file>configmanager.cpp</file>
+        <file>configmanager.h</file>
+        <file>coordinate.cpp</file>
+        <file>coordinate.h</file>
+        <file>dialog.cpp</file>
+        <file>dialog.h</file>
+        <file>director.cpp</file>
+        <file>director.h</file>
+        <file>factory.h</file>
+        <file>game.cpp</file>
+        <file>game.h</file>
+        <file>gamebuilder.h</file>
+        <file>Horizontalbackground.cpp</file>
+        <file>horizontalbackground.h</file>
+        <file>image.cpp</file>
+        <file>image.h</file>
+        <file>main.cpp</file>
+        <file>peppa_evil_factory.cpp</file>
+        <file>peppa_evil_factory.h</file>
+        <file>peppafactory.h</file>
+        <file>peppagamebuilder.cpp</file>
+        <file>peppagamebuilder.h</file>
+        <file>size.h</file>
+        <file>stickman.cpp</file>
+        <file>stickman.h</file>
     </qresource>
 </RCC>

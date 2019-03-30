@@ -4,7 +4,8 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui\
+         multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -32,7 +33,8 @@ SOURCES += \
     asm1game.cpp \
     peppagamebuilder.cpp \
     director.cpp \
-    configmanager.cpp
+    configmanager.cpp \
+    peppa_evil_factory.cpp
 
 HEADERS += \
         dialog.h \
@@ -49,7 +51,8 @@ HEADERS += \
     peppagamebuilder.h \
     director.h \
     size.h \
-    configmanager.h
+    configmanager.h \
+    peppa_evil_factory.h
 
 FORMS += \
         dialog.ui
