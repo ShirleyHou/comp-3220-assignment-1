@@ -7,11 +7,12 @@
 #include "configmanager.h"
 class PeppaGameBuilder:public GameBuilder{
 public:
-    PeppaGameBuilder(){};
-    std::vector<Character*> buildCharacters(vector<Character_config*> cfgs);
-    Background* buildBackground(std::string image_path, int speed);
-    Game* getGame();
-    virtual ~PeppaGameBuilder(){};
+    PeppaGameBuilder(){}
+    std::vector<Character*> buildCharacters(vector<Character_config*> cfgs)override;
+    Background* buildBackground(std::string image_path, int speed)override;
+    Game* getGame()override;
+    QMediaPlaylist * setMusic(std::string music_url)override;
+    virtual ~PeppaGameBuilder()override{}
 
 };
 

@@ -24,9 +24,9 @@ int main(int argc, char *argv[])
 
     Director director(pgb, pef, cm);
     Dialog w;
-    Game* game1 = director.makeGame();
+    Game* game1 = director.makeGame("qrc:/resources/sound/swag.mp3");
     Director director2(pgb, pf, cm);
-    Game* game2 = director2.makeGame();
+    Game* game2 = director2.makeGame("qrc:/resources/sound/peppa.mp3");
     vector<Game*> games;
 
     games.push_back(game2);

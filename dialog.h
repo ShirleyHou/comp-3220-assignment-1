@@ -42,7 +42,7 @@ private:
     Ui::Dialog *ui;
     int m_counter;
     int game_selector;
-
+    QMediaPlayer* m_music;
 
 };
 

@@ -15,7 +15,7 @@ using namespace std;
 class Director{
 public:
     Director(GameBuilder* concrete_builder, Factory* factory, ConfigManager* cm);
-    Game* makeGame();
+    Game* makeGame(std::string music);
     ~Director(){}
 private:
     GameBuilder* my_builder;

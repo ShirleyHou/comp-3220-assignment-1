@@ -23,7 +23,11 @@ public:
 
     void read(string filename);
     string m_background_path;
-    int m_window_size;
+
+    int m_background_width;
+    int m_background_height;
+    int m_background_velocity;
+
     vector<Character_config*> character_settings;
     void print_characters();
     ~ConfigManager(){

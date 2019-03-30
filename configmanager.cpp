@@ -13,6 +13,12 @@ void ConfigManager::read(std::string filename)
     QJsonDocument document = QJsonDocument::fromJson(val.toUtf8());
     QJsonObject object = document.object();
 
+
+    QJsonValue background = object.value("Background");
+    QJsonObject background_object = background.toObject();
+    m_background_path = background_object.value("path").toString().toStdString();
+    m_background_velocity = background_object.value("velocity").toInt();
+
     QJsonValue value = object.value("Character");
     QJsonArray array = value.toArray();
     vector<Character_config*> m_characters;

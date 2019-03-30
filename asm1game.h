@@ -8,6 +8,8 @@ public:
     virtual ~Asm1Game(){};
     Asm1Game(Background* background, std::vector<Character*> characters);
     void render(QPainter &painter, int m_counter);
+
+
 };
 
 #endif // ASM1GAME_H

@@ -30,8 +30,19 @@ Background* PeppaGameBuilder::buildBackground(std::string path, int x_speed){
     return background;
 
 };
+
+QMediaPlaylist * PeppaGameBuilder::setMusic(std::string music_url){
+    QMediaPlaylist *playlist = new QMediaPlaylist();
+    playlist->addMedia(QUrl(music_url.c_str()));
+    playlist->setPlaybackMode(QMediaPlaylist::Loop);
+
+    return playlist;
+}
 Game* PeppaGameBuilder::getGame(){
     Game* new_game(game_factory->createGame());
+//    QMediaPlaylist* music = setMusic("qrc:/resources/sound/peppa.mp3");
+//    music->setPlaybackMode(QMediaPlaylist::Loop);
+//    new_game->m_playlist = music;
     return new_game;
 };
 

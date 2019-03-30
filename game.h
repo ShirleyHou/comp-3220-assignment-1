@@ -5,6 +5,7 @@
 #include "background.h"
 #include "character.h"
 #include <vector>
+#include <QMediaPlaylist>
 class Game
 {
 public:
@@ -22,7 +23,7 @@ public:
     virtual void render(QPainter &painter, int m_counter)=0;
     Background* m_background = nullptr;
     std::vector<Character*> m_characters = std::vector<Character*>();
-
+    QMediaPlaylist *m_playlist;
 };
 
 #endif // GAME_H
