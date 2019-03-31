@@ -5,6 +5,10 @@
 #include "stickman.h"
 #include "game.h"
 #include "asm1game.h"
+
+/*
+ * Concrete factory producing the normal peppa game mode (with a horizontal scrolling background)
+ */
 class PeppaFactory : public Factory{
 public:
     Background* createBackground(std::string picture_path,

@@ -21,8 +21,6 @@ Character::Character(std::string picture_path,
 
     set_width(user_scale * (double) get_width());
     set_height(user_scale * (double) get_height());
-    //scale = user_scale;
+
 }
 
-//double Character::get_scale() const {return scale;}
-//void Character::set_scale(double user_scale){scale = user_scale;}

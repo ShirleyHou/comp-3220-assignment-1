@@ -29,6 +29,7 @@ std::vector<Character*> PeppaGameBuilder::buildCharacters(vector<Character_confi
     return characters;
 
 };
+
 Background* PeppaGameBuilder::buildBackground(std::string path, int width, int height, int x_speed){
 
     Background* background = game_factory->createBackground(path,0,0,width, height, x_speed);

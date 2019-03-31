@@ -5,7 +5,9 @@
 
 /*
  * A part of abstract factory structure: the Abstract Product: Character
- * inherited by one or more concrete Stickman/SwagStickman that needs to implement the following functions:
+ * inherited by one or more concrete Stickman/SwagStickman.
+ *
+ * feature: automatically handles large input image.(if the input file is too big, prescale to 300*300)
  *
  */
 
@@ -24,12 +26,6 @@ public:
 
 
     virtual ~Character(){}
-//    double get_scale() const;
-//    void set_scale(double scale);
-
-
-//private:
-//    double scale;
 
 
 };

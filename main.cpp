@@ -16,11 +16,13 @@ int main(int argc, char *argv[])
     cm->print_characters();
 
     QApplication a(argc, argv);
+
+    //abstract factory pattern + builder pattern
     PeppaFactory* pf = new PeppaFactory;
     peppa_evil_factory* pef = new peppa_evil_factory;
+
+    //builder pattern
     PeppaGameBuilder* pgb = new PeppaGameBuilder;
-
-
     Director director(pgb, pef, cm);
     Dialog w;
     Game* game1 = director.makeGame("qrc:/resources/sound/swag.mp3");

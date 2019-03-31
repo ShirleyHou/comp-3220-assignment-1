@@ -12,7 +12,11 @@
 
 using namespace std;
 
-
+/*
+ * Director for the Builder Pattern.
+ * Assemble and produce the game accroding to the given concrete factories and pass the
+ * resulting game to the dialog to render.
+ */
 class Director{
 public:
     Director(GameBuilder* concrete_builder, Factory* factory, ConfigManager* cm);

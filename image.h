@@ -3,6 +3,11 @@
 
 #include <QPainter>
 
+/*
+ * Base class for all objects in the game that has a jpeg/png/gif to render.
+ * Inherited by abstract character and abstract background.
+ * Note: not a part of the abstract factory pattern. Pure inheritance.
+ */
 class Image{
 public:
     Image(std::string picturepath, int x_axis, int y_axis,double x_velocity, double y_velocity);

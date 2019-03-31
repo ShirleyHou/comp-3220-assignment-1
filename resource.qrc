@@ -60,5 +60,6 @@
         <file>stickman.cpp</file>
         <file>stickman.h</file>
         <file>img/peppa_bg_1024_768.jpg</file>
+        <file>img/coin.png</file>
     </qresource>
 </RCC>

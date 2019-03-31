@@ -11,7 +11,7 @@
          "x_pos": 500,
          "y_pos": 350,
          "x_velocity":5,
-         "size":"GIANT",
+         "size":"REGULAR",
          "motion":"FAST"
         },
         {"name": "George",
@@ -19,7 +19,7 @@
         "x_pos": 700,
         "y_pos": 350,
         "x_velocity":5,
-        "size":"GIANT",
+        "size":"REGULAR",
         "motion":"ON"
 
        },{
@@ -28,7 +28,7 @@
        "x_pos": 900,
        "y_pos": 200,
        "x_velocity":5,
-       "size":"GIANT",
+       "size":"REGULAR",
        "motion":"ON"
 
       },{
@@ -37,7 +37,7 @@
       "x_pos": 200,
       "y_pos": 200,
       "x_velocity":5,
-      "size":"GIANT",
+      "size":"REGULAR",
       "motion":"ON"
 
       }]

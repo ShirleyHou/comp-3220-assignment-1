@@ -9,6 +9,16 @@ Stickman::Stickman(std::string picture_path, int x_axis=0, int y_axis=0, int x_m
                    int y_max = 2000, int x_velocity =0,  double scale=1.0, std::string motion="OFF"):
     Character(picture_path, x_axis, y_axis, x_max, y_max, x_velocity,0,scale, motion)
 {
+
+    /*
+     * allows random oscillating of each character in the y direction.
+     * these attributes depends on the "MOTION" flag.
+     *
+     * FAST: quick oscillation, larger amplitude.
+     * ON: regular oscillation rate, moderate amplitude
+     * OFF: no y-axis movement at all
+    */
+
     m_y_delta = 0;
     m_y_amplitude = 0;
     m_y_frequency=5;
@@ -16,6 +26,9 @@ Stickman::Stickman(std::string picture_path, int x_axis=0, int y_axis=0, int x_m
     m_x_max = x_max;
     m_y_max = y_max;
     int height = get_height();
+
+    // allows 3 images to be rendered in order 1-2-3-3-2-1 to produce a continuous
+    // animation effect.
 
     QPixmap * pixmap = get_pixmap();
     std::vector<QPixmap*> animated;

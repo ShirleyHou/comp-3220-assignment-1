@@ -6,7 +6,7 @@
 #include "configmanager.h"
 
 /*
- *
+ * Abstract Builder Interface
  */
 class GameBuilder{
 public:

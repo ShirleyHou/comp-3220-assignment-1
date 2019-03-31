@@ -4,6 +4,11 @@
 #include "factory.h"
 #include <vector>
 #include "configmanager.h"
+
+/*
+ * Concrete Builder
+ */
+
 class PeppaGameBuilder:public GameBuilder{
 public:
     PeppaGameBuilder(){}

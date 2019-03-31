@@ -46,6 +46,7 @@ void ConfigManager::read(std::string filename)
     }
     character_settings = m_characters;
 }
+
 //check size to prevent error.
 string ConfigManager::size_check(string size){
     if (size!="TINY"&&size!="REGULAR"&&size!="LARGE"&&size!="GIANT"){

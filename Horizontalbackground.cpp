@@ -10,6 +10,7 @@ bool HorizontalBackground::repeat(){
 
     return get_x_axis() > get_width();
 }
+
 void HorizontalBackground::render(QPainter &painter, int m_counter)
 {
     int m_x_axis = get_x_axis();

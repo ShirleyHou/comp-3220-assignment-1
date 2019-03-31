@@ -14,10 +14,16 @@ Dialog::Dialog(QWidget *parent) :
     game_selector = 0;
 
 }
+
 void Dialog::setGames(std::vector<Game*> games){
     m_games = games;
 
 }
+
+/*
+ * Initialise the dialog's rendering with a choosen first game.
+ *
+ */
 void Dialog::loadGame(){
     ui->setupUi(this);
     current_game = m_games[game_selector%m_games.size()];
@@ -59,6 +65,10 @@ Dialog::~Dialog()
     delete ui;
 }
 
+/*
+ * Botton handler for "play/palse".
+ *
+ */
 void Dialog::on_pushButton_clicked()
 {
 
@@ -76,7 +86,6 @@ void Dialog::on_pushButton_clicked()
 
 /*
  * Botton handler for "swag".
- *
  *
  */
 void Dialog::on_pushButton_2_clicked()

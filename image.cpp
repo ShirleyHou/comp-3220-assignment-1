@@ -1,6 +1,6 @@
 #include "image.h"
 
-/*!
+/*
  * Initialize image base object.
  * Background, Character and their concrete child classes all inherit from Image.
  *
@@ -22,7 +22,7 @@ Image::Image(std::string picture_path, int x_axis, int y_axis, double x_velocity
     m_height = m_QPixmap->height();
 }
 
-/*!
+/*
  * set the image's QPixmap object according to the given literal string file path.
  * \param: std::string
  */
@@ -48,7 +48,7 @@ double Image::get_y_velocity()const{return m_y_velocity;}
 QPixmap* Image::get_pixmap() const {return m_QPixmap;}
 
 
-/*!
+/*
  * set image width to int value no smaller than 10
  * \param: int
  */
@@ -57,7 +57,7 @@ void Image::set_width(int w) {
 
 }
 
-/*!
+/*
  * set image height to int value no smaller than 10
  * \param: int
  */

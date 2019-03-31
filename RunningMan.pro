@@ -37,7 +37,8 @@ SOURCES += \
     peppa_evil_factory.cpp \
     image.cpp \
     character.cpp \
-    background.cpp
+    background.cpp \
+    verticalbackground.cpp
 
 HEADERS += \
         dialog.h \
@@ -54,7 +55,8 @@ HEADERS += \
     peppagamebuilder.h \
     director.h \
     configmanager.h \
-    peppa_evil_factory.h
+    peppa_evil_factory.h \
+    verticalbackground.h
 
 FORMS += \
         dialog.ui
