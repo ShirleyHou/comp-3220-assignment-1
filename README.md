@@ -9,6 +9,43 @@ This project is the first stage of INFO3220 assignments.
 It allows multiple characters to be desplayed on a moving background.
 It also allows switching between 2 game modes (regular Peppa/Thug Life Swag Peppa) for the meme effect. 
 
+## Design Pattern Note
+
+Abstract Factory and Builder Pattern is used here. 
+
+**Rationale for using the Abstract Factory pattern:**
+
+I want to have two/more game modes (for the meme effect) to switch between. Two game modes involves different background scrolling direction and potentially different character components, but they should all have the same interface.
+
+### abstract factory code overview
+* **factory**: abstract factory interface.
+* **peppafactory**: concrete factory to produce concrete products for the first game mode (horizontal background, normal characters)
+* **peppa_evil_factory**: concrete factory to produce concrete second game mode. (horizontal background, gangsta characters)
+
+* **character**: an abstract product 
+* **stickman** a concrete product inherits abstract character.
+* **background**: an abstract product 
+* **horizontalbackground** a concrete background proudct inherits abstract background, used by peppafactory.
+* **verticalbackground** a concrete background product inherits abstract background, used by peppa_evil_factory.
+
+**Rationale for using the Builder pattern:**
+
+The initial motivation is that I want to create multuple stickman to make the Peppa Family. A game makes out of a background, a list of characters and maybe in the future, more components (needs to be flexible). Assembling them should not be the duty of the game, but a builder instead. 
+
+### builder design pattern overview
+* **gamebuilder**: abstract builder interface.
+* **peppagamebuilder**: concrete builder that uses an abstract factory interface. 
+
+* **director**: uses information from configmanager(config file reader) and game builder, assembles its corresponding products into a concrete game, and passes the assembled game to dialog to render.
+
+### helper classes/structs:
+
+* **configmanager**: reads file, error handling,  and pass file information.
+
+* **dialogue**: render the game object. controls button and user interaction.
+
+
+
 ## Getting Started
 
 ### Prerequisites

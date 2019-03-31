@@ -7,6 +7,9 @@
 #include "asm1game.h"
 #include "verticalbackground.h"
 
+/*
+ * Concrete factory producing the gangsta peppa game mode (with a vertical scrolling backrgound)
+ */
 
 class peppa_evil_factory: public Factory
 {
