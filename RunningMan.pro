@@ -34,7 +34,10 @@ SOURCES += \
     peppagamebuilder.cpp \
     director.cpp \
     configmanager.cpp \
-    peppa_evil_factory.cpp
+    peppa_evil_factory.cpp \
+    image.cpp \
+    character.cpp \
+    background.cpp
 
 HEADERS += \
         dialog.h \
@@ -50,7 +53,6 @@ HEADERS += \
     gamebuilder.h \
     peppagamebuilder.h \
     director.h \
-    size.h \
     configmanager.h \
     peppa_evil_factory.h
 
@@ -64,3 +66,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resource.qrc
+
+DISTFILES += \
+    README.md

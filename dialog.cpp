@@ -1,10 +1,9 @@
-#include "dialog.h"
-#include "ui_dialog.h"
-#include <QPixmap>
+
 #include <QTimer>
 #include <iostream>
-#include "peppafactory.h"
-#include "peppagamebuilder.h"
+#include "dialog.h"
+#include "ui_dialog.h"
+
 
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
@@ -22,10 +21,10 @@ void Dialog::setGames(std::vector<Game*> games){
 void Dialog::loadGame(){
     ui->setupUi(this);
     current_game = m_games[game_selector%m_games.size()];
-    this->resize(current_game->m_background->m_width, current_game->m_background->m_height);
+    this->resize(current_game->get_background()->get_width(), current_game->get_background()->get_height());
 
 
-    m_music->setPlaylist(current_game->m_playlist);
+    m_music->setPlaylist(current_game->get_playlist());
     m_music->play();
 
 
@@ -64,26 +63,41 @@ void Dialog::on_pushButton_clicked()
 {
 
     if (m_timer->isActive()){
-        cout<<"paused"<<endl;
+        std::cout<<"paused"<<std::endl;
         m_timer->stop();
         m_music->pause();
     }else{
-        cout<<"resumed"<<endl;
+        std::cout<<"resumed"<<std::endl;
         m_timer->start();
         m_music->play();
     }
 
 }
 
+/*
+ * Botton handler for "swag".
+ *
+ *
+ */
 void Dialog::on_pushButton_2_clicked()
 {
-//    QMediaPlayer * music = new QMediaPlayer();
-//    music->setMedia(QUrl("qrc:/resources/sound/swag.mp3"));
-//    music->play();
+
     m_music->stop();
     game_selector+=1;
+
+    std::vector<int> x_positions;
+    for (auto c:current_game->get_characters())
+        x_positions.push_back(c->get_x_axis());
+
+    std::reverse(x_positions.begin(),x_positions.end());
     current_game = m_games[game_selector%m_games.size()];
-    m_music->setPlaylist(current_game->m_playlist);
+
+    for (auto c:current_game->get_characters()){
+        c->set_x_axis(x_positions.back());
+        x_positions.pop_back();
+    }
+
+    m_music->setPlaylist(current_game->get_playlist());
     m_music->play();
 }
 

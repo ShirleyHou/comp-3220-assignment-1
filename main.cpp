@@ -1,13 +1,12 @@
-#include "dialog.h"
 #include <QApplication>
+#include <configmanager.h>
+
 #include "peppafactory.h"
 #include "peppagamebuilder.h"
 #include "director.h"
-#include <iostream>
-#include <fstream>
-#include <configmanager.h>
-
+#include "dialog.h"
 #include "peppa_evil_factory.h"
+
 using namespace std;
 int main(int argc, char *argv[])
 {

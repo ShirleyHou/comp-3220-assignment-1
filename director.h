@@ -1,14 +1,15 @@
 #ifndef DIRECTOR_H
 #define DIRECTOR_H
 
+#include <fstream>
+#include <vector>
 
 #include "factory.h"
 #include "gamebuilder.h"
 #include "configmanager.h"
 #include "game.h"
-#include "size.h"
-#include <fstream>
-#include <vector>
+
+
 using namespace std;
 
 
@@ -20,7 +21,6 @@ public:
 private:
     GameBuilder* my_builder;
     Factory* my_factory;
-    Size m_size;
     std::string m_bg_path;
     int m_bg_speed;
     ConfigManager* m_cm;

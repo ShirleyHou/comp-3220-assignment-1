@@ -3,10 +3,11 @@
 
 #include <QDialog>
 #include <QPainter>
-#include <vector>
-#include "game.h"
 #include <QDialogButtonBox>
 #include <QMediaPlayer>
+#include <vector>
+
+#include "game.h"
 
 namespace Ui {
 class Dialog;

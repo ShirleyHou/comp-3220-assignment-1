@@ -1,9 +1,5 @@
 #include "peppagamebuilder.h"
 
-//PeppaGameBuilder::PeppaGameBuilder(Factory * factory):
-//    GameBuilder(factory)
-//{};
-#include <iostream>
 std::vector<Character*> PeppaGameBuilder::buildCharacters(vector<Character_config*> cfgs){
 
     //add another method to build individual characters
@@ -18,20 +14,31 @@ std::vector<Character*> PeppaGameBuilder::buildCharacters(vector<Character_confi
         }else if (cfg->size_str=="GIANT"){
             scale = 2.0;
         }
-        Character* new_character = game_factory->createCharacter(cfg->image_path,cfg->x_position,cfg->y_position,0,0,scale, cfg->motion);
+        Character* new_character = game_factory->createCharacter(
+                    cfg->image_path,
+                    cfg->x_position,
+                    cfg->y_position,
+                    cfg->x_max,
+                    cfg->y_max,
+                    cfg->x_velocity,
+                    0,
+                    scale,
+                    cfg->motion);
         characters.push_back(new_character);
     }
     return characters;
 
 };
-Background* PeppaGameBuilder::buildBackground(std::string path, int x_speed){
+Background* PeppaGameBuilder::buildBackground(std::string path, int width, int height, int x_speed){
 
-    Background* background = game_factory->createBackground(path,0,0,x_speed);
+    Background* background = game_factory->createBackground(path,0,0,width, height, x_speed);
+
     return background;
 
 };
 
 QMediaPlaylist * PeppaGameBuilder::setMusic(std::string music_url){
+
     QMediaPlaylist *playlist = new QMediaPlaylist();
     playlist->addMedia(QUrl(music_url.c_str()));
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
@@ -40,9 +47,6 @@ QMediaPlaylist * PeppaGameBuilder::setMusic(std::string music_url){
 }
 Game* PeppaGameBuilder::getGame(){
     Game* new_game(game_factory->createGame());
-//    QMediaPlaylist* music = setMusic("qrc:/resources/sound/peppa.mp3");
-//    music->setPlaybackMode(QMediaPlaylist::Loop);
-//    new_game->m_playlist = music;
     return new_game;
 };
 

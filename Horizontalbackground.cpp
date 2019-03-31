@@ -1,17 +1,26 @@
 #include "horizontalbackground.h"
-#include <iostream>
+
 using namespace std;
 
-HorizontalBackground::HorizontalBackground(string picture_path, int x_axis, int y_axis, double velocity):
-    Background (picture_path, x_axis,y_axis,velocity, 0)
+HorizontalBackground::HorizontalBackground(string picture_path, int x_axis, int y_axis, int width, int height, double velocity):
+    Background (picture_path, x_axis,y_axis,width, height, velocity, 0)
 {}
 
 bool HorizontalBackground::repeat(){
 
-    return m_x_axis > m_width;
+    return get_x_axis() > get_width();
 }
 void HorizontalBackground::render(QPainter &painter, int m_counter)
 {
+    int m_x_axis = get_x_axis();
+
+    int m_y_axis = get_y_axis();
+    int m_height = get_height();
+    int m_width = get_width();
+    double m_x_velocity = get_x_velocity();
+    QPixmap m_QPixmap = *get_pixmap();
+
+
     if (repeat()) {
         m_x_axis = 0;
     }
@@ -31,8 +40,6 @@ void HorizontalBackground::render(QPainter &painter, int m_counter)
                        m_width,
                        m_height,
                        m_QPixmap);
-    m_x_axis+=m_x_velocity;
+    set_x_axis(m_x_axis+m_x_velocity);
 }
-std::string HorizontalBackground::tell(){
-    return "I am a Horizontal Background!";
-}
+
